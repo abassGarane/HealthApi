@@ -1,8 +1,8 @@
-import pool from "../config/mysql.config";
-import Response from "../domain/Response";
-import log from "../util/logger";
-import QUERY from "../query/patient.query";
-import httpStatus from "../util/httpStatus";
+import pool from "../config/mysql.config.js";
+import Response from "../domain/Response.js";
+import log from "../util/logger.js";
+import {QUERY} from "../query/patient.query.js";
+import httpStatus from "../util/httpStatus.js";
 
 export const getPatients = (req, res) => {
   log.info(`${req.method} ${req.originalUrl} fetching petients`);
