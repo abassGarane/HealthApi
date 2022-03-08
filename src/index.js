@@ -8,7 +8,7 @@ import httpStatus from "./util/httpStatus.js";
 import log from "./util/logger.js";
 
 dotenv.config();
-const PORT = process.env.SERVER_PORT || 3000;
+const PORT = process.env.SERVER_PORT || 5000;
 const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
