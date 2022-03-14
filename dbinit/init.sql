@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS patientsdb;
 CREATE DATABASE IF NOT EXISTS patientsdb;
 
 DROP TABLE IF EXISTS patients;
@@ -15,9 +16,8 @@ CREATE TABLE patients(
     CONSTRAINT UQ_Patients_Email UNIQUE(email)
 );
 
-
 DELIMITER // 
-    CREATE PROCEDURE create_and_return(
+    CREATE PROCEDURE `patientsdb`.`create_and_return`(
     IN first_name VARCHAR(255),
     IN last_name VARCHAR(255),
     IN email VARCHAR(255), 
